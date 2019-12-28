@@ -1,0 +1,41 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+.home-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.introduction-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Merienda', cursive;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.introduction-photo-content {
+    display: flex;
+}
+
+.introduction-info-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+}
+.motto-up-content {
+}
+.photo-between-content {
+}
+.motto-down-content {
+}
