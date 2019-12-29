@@ -1,10 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 import "./footer.css";
+import { FaFacebookSquare, FaInstagram} from "react-icons/fa";
 
-function App() {
+
+export default class App extends Component{
+  render()
+ {
   return (
-    <div className="footer"> </div>
+    <div className="footer"> 
+    <FaFacebookSquare size="100px" color="#6a9dbc" />
+    <FaInstagram size="100px" color="#6a9dbc" />
+    <FaInstagram size="100px" color="#6a9dbc" />
+    &copy; Copyright 2020 </div>
   );
 }
-
-export default App;
+}

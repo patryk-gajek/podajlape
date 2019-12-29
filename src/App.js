@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Router>
         <Navbar></Navbar>
         <div style={{height: '150px'}}></div>

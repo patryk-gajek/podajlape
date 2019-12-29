@@ -4,6 +4,8 @@
   width: 100%;
   grid-template-columns: 1fr 2fr;
   padding: 20px 0;
+  top: 0;
+  left: 0;
 }
 
 .stick-nav a {
