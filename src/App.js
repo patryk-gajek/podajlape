@@ -11,7 +11,7 @@ function App() {
     <div className="app">
       <Router>
         <Navbar></Navbar>
-        <div style={{height: '150px'}}></div>
+        <div style={{height: '0px'}}></div>
         <Switch>
           <Route exact path="/">
             <Home />
@@ -21,8 +21,9 @@ function App() {
           <Route path="/kontakt">Kontakt</Route>
           <Route path="/uslugi">Uslugi</Route>
         </Switch>
+        <Footer></Footer>
       </Router>
-      <Footer></Footer>
+      
     </div>
   );
 }

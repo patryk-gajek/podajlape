@@ -1,36 +1,61 @@
 .navbar {
   display: grid;
-  height: 80px;
+  height: 50px;
   width: 100%;
-  grid-template-columns: 1fr 2fr;
-  padding: 20px 0;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  padding: 10px 0;
   top: 0;
   left: 0;
+  z-index: 999;
+  font-family: "Merienda", cursive;
+  background: linear-gradient(
+    270deg,
+    rgba(194, 26, 26, 0.9) 0%,
+    rgba(243, 239, 239, 0.75) 100%
+  );
+  position: fixed;
+}
+.navbar-logo {
+  font-family: "Merienda", cursive;
+  display: flex;
+  justify-content: center;
+  font-size: 190%;
+  flex-direction: row;
+  margin: auto;
+}
+.item-logo {
+  display: flex;
+  background-repeat: no-repeat;
+  height: 60px;
+  width: 70px;
+  background-image: url(../../images/logo2.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0 20px 0 0;
 }
 
 .stick-nav a {
-    color:white;
+  color: white;
 }
 
-.stick-nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: black;
-    opacity: 0.7;
-    
+.stick-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .navbar ul {
   display: flex;
   list-style: none;
-  justify-content: space-around;
   padding: 0;
+  margin: 0;
   flex-direction: row;
+  grid-column: 2 / 3;
 }
 
-a {
+.navbar a {
   text-decoration: none;
-  color: black;
+  color: white;
   display: flex;
   justify-content: center;
   width: 100%;

@@ -44,12 +44,12 @@ class Navbar extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  };
+    window.addEventListener("scroll", this.handleScroll);
+  }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  };
+    window.removeEventListener("scroll", this.handleScroll);
+  }
 
   handleScroll(event) {
     let navbar = document.getElementsByClassName("navbar")[0];
@@ -60,11 +60,15 @@ class Navbar extends Component {
     } else {
       navbar.classList.remove("stick-nav");
     }
-  };
+  }
 
   render() {
     return (
       <div className="navbar">
+        <div className="navbar-logo">
+          <div className="item-logo"></div>
+          po.dajlape
+        </div>
         <ul>
           <Link to="/">
             <li date-id="1" onClick={this.setActiveTab}>
