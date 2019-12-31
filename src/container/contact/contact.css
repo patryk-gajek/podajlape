@@ -1,0 +1,46 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fcfcfc;
+}
+.contact-dog {
+  width: 50%;
+  height: 500px;
+}
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.contact-left {
+}
+.contact-logopodajlape1 {
+  height: 100px;
+}
+.contact-question {
+  font-size: 150%;
+  font-family: "Merienda", cursive;
+  text-align: center;
+  padding-top: 50px;
+}
+.contact-info {
+  list-style: none;
+}
+.contact li {
+  margin: 10px;
+}
+.contact-left ul li:first-child {
+  font-size: 1.3rem;
+  list-style: none;
+  padding: 10px;
+  text-align: center;
+  font-family: "Merienda", cursive;
+}
+.contact-right {
+  margin-bottom: 50px;
+  padding-top: 30px;
+}

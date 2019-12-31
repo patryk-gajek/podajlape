@@ -11,8 +11,8 @@
   font-family: "Merienda", cursive;
   background: linear-gradient(
     270deg,
-    rgba(194, 26, 26, 0.9) 0%,
-    rgba(243, 239, 239, 0.75) 100%
+    rgba(97, 122, 100, 0.95) 40%,
+    rgba(255, 255, 255, 0.75) 80%
   );
   position: fixed;
 }

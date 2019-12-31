@@ -5,7 +5,7 @@
   margin: 50px 0 0 0;
   justify-content: center;
   font-size: 110%;
-  background-color: #ba2521;
+  background-color: #617a64;
   align-items: center;
   flex-direction: column;
   color: white;
@@ -29,7 +29,7 @@
 }
 
 .icon {
-  height: 50px;
+  height: 60px;
   align-items: center;
   display: flex;
   color: white;
@@ -37,4 +37,8 @@
 }
 a {
   display: block;
+  text-decoration: none;
+}
+.footer-icon-text {
+  margin-top: 10px;
 }

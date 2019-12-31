@@ -15,7 +15,7 @@ export default class App extends Component {
             target="_blank"
           >
             <FaFacebookSquare size="100px" />
-            Facebook
+            <span className="footer-icon-text"> Facebook</span>
           </a>
           <a
             className="icon"
@@ -23,10 +23,11 @@ export default class App extends Component {
             target="_blank"
           >
             <FaInstagram size="100px" />
-            Instagram
+            <span className="footer-icon-text"> Instagram</span>
           </a>
-          <Link className="icon" to="/kontakt">
-            <MdContactMail size="100px" /> Kontakt
+          <Link className="icon" to="/contact">
+            <MdContactMail size="100px" />{" "}
+            <span className="footer-icon-text"> Kontakt</span>
           </Link>
         </div>
         <div className="copyright-footer">&copy; Copyright 2020</div>

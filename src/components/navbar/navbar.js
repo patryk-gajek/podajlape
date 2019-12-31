@@ -14,9 +14,9 @@ class Navbar extends Component {
       activeTab = 2;
     } else if (productId == "galeria") {
       activeTab = 3;
-    } else if (productId == "kontakt") {
+    } else if (productId == "oferta") {
       activeTab = 4;
-    } else if (productId == "uslugi") {
+    } else if (productId == "contact") {
       activeTab = 5;
     } else {
       activeTab = 1;
@@ -85,16 +85,17 @@ class Navbar extends Component {
               Galeria
             </li>
           </Link>
-          <Link to="/kontakt">
+          <Link to="/oferta">
             <li date-id="4" onClick={this.setActiveTab}>
+              Oferta
+            </li>
+          </Link>
+          <Link to="/contact">
+            <li date-id="5" onClick={this.setActiveTab}>
               Kontakt
             </li>
           </Link>
-          <Link to="/uslugi">
-            <li date-id="5" onClick={this.setActiveTab}>
-              Usługi
-            </li>
-          </Link>
+          
         </ul>
       </div>
     );
