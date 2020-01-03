@@ -1,104 +1,58 @@
 import "./navbar.css";
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
+import logopodajlape1 from "../../images/logopodajlape1.png";
+import Language from '../Language/Language';
+import { LanguageContext } from '../languages/config';
 
-class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    let url = window.location.href;
-    let pom = url.split("/");
-    let productId = pom[pom.length - 1];
-    let activeTab = 1;
-    if (productId == "omnie") {
-      activeTab = 2;
-    } else if (productId == "galeria") {
-      activeTab = 3;
-    } else if (productId == "oferta") {
-      activeTab = 4;
-    } else if (productId == "contact") {
-      activeTab = 5;
-    } else {
-      activeTab = 1;
-    }
-    this.state = {
-      activeTab: activeTab
-    };
-    this.setActiveTab = this.setActiveTab.bind(this);
-  }
+ function Navbar() {
 
-  setActiveTab(event) {
-    this.setState(
-      {
-        activeTab: event.target.dataset.id
-      },
-      () => {
-        console.log(this.state.activeTab);
-        if (this.state.activeTab == 1) {
-          console.log("home");
-        } else {
-          console.log("another");
-        }
-      }
-    );
-  }
+  let { languageCode, labels } = React.useContext(LanguageContext);
 
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
+  let match = useRouteMatch({
+    path: '/',
+    exact: true
+  });
+let navbarItems = [
+  { link: '/aboutme', label: labels.aboutme[languageCode] },
+  { link: '/gallery', label: labels.gallery[languageCode] },
+  { link: '/offer', label: labels.offer[languageCode] },
+  { link: '/contact', label: labels.contact[languageCode] },
+];
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
+return (
+<nav className={match ? "navbar" : "navbar navbar-full"}>
 
-  handleScroll(event) {
-    let navbar = document.getElementsByClassName("navbar")[0];
-    let navHeight = navbar.clientHeight;
-    let currentPosition = document.documentElement.scrollTop;
-    if (currentPosition > navHeight) {
-      navbar.classList.add("stick-nav");
-    } else {
-      navbar.classList.remove("stick-nav");
-    }
-  }
-
-  render() {
+    <ul>
+          <li>
+            <Link to="/">
+              <img src={logopodajlape1} alt="logopodajlape"></img>
+            </Link>
+          </li>
+ 
+          {navbarItems.map(item => {
     return (
-      <div className="navbar">
-        <div className="navbar-logo">
-          <div className="item-logo"></div>
-          po.dajlape
-        </div>
-        <ul>
-          <Link to="/">
-            <li date-id="1" onClick={this.setActiveTab}>
-              Home
-            </li>
-          </Link>
-          <Link to="/omnie">
-            <li date-id="2" onClick={this.setActiveTab}>
-              O mnie
-            </li>
-          </Link>
-          <Link to="/galeria">
-            <li date-id="3" onClick={this.setActiveTab}>
-              Galeria
-            </li>
-          </Link>
-          <Link to="/oferta">
-            <li date-id="4" onClick={this.setActiveTab}>
-              Oferta
-            </li>
-          </Link>
-          <Link to="/contact">
-            <li date-id="5" onClick={this.setActiveTab}>
-              Kontakt
-            </li>
-          </Link>
-          
+      <NavbarItem label={item.label} to={item.link} activeOnlyWhenExact={false}/>
+    )
+          })}
+          <li><Language /></li>
         </ul>
-      </div>
-    );
+      </nav>
+    )
   }
-}
-export default Navbar;
+
+  function NavbarItem({ label, to, activeOnlyWhenExact }) {
+  
+    let match = useRouteMatch({
+      path: to,
+      exact: activeOnlyWhenExact
+    }); 
+    return (
+      <li className={match ? "active" : ""}>
+        <Link to={to}>{label}</Link>
+      </li>
+    );
+  
+  }
+  
+  export default Navbar;

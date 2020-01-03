@@ -1,0 +1,19 @@
+.language-container {
+    display: flex;
+    -webkit-box-shadow: 0px 0px 2px 1px white;
+    -moz-box-shadow: 0px 0px 2px 1px white;
+    box-shadow: 0px 0px 2px 1px white;
+  }
+  
+  .language-item {
+    color: white;
+    display: block;
+    cursor: pointer !important;
+    padding: 5px;
+    text-shadow: 1px 1px #000;
+  }
+  
+  .current-language {
+    font-weight: 600;
+  }
+  

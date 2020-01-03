@@ -15,11 +15,63 @@
   justify-content: space-evenly;
   width: 100%;
 }
-
+.contact-question::after {
+  content: "";
+  display: block;
+  width: 35%;
+  height: 240px;
+  z-index: 10;
+  position: absolute;
+  margin: 31% 0 0 12%;
+  top: 0;
+  left: 0;
+  opacity: 0.05;
+  background-image: url("../../images/lapkitlo.png");
+  background-repeat: no-repeat;
+}
 .contact-left {
+  z-index: 0;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Merienda", cursive;
+  width: 50%;
+}
+.contact-left-name {
+  font-size: 150%;
+  margin: 20px 0 20px 0;
+}
+.contact-left::after {
+  content: "";
+  display: block;
+  background-color: rgba(239, 222, 228);
+  width: 25%;
+  height: 515px;
+  z-index: -100;
+  position: absolute;
+  top: -130px;
+  left: 5px;
 }
 .contact-logopodajlape1 {
   height: 100px;
+}
+.icons-contact {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 20px 50px 0 50px;
+  justify-content: space-around;
+  text-align: center;
+}
+.icon-contact-text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  color: black;
 }
 .contact-question {
   font-size: 150%;
@@ -27,20 +79,9 @@
   text-align: center;
   padding-top: 50px;
 }
-.contact-info {
-  list-style: none;
-}
-.contact li {
-  margin: 10px;
-}
-.contact-left ul li:first-child {
-  font-size: 1.3rem;
-  list-style: none;
-  padding: 10px;
-  text-align: center;
-  font-family: "Merienda", cursive;
-}
+
 .contact-right {
   margin-bottom: 50px;
   padding-top: 30px;
+  width: 50%;
 }

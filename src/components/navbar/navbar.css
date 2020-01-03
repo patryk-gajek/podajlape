@@ -1,64 +1,58 @@
 .navbar {
-  display: grid;
+    width: 100%;
+    background: linear-gradient(11deg, rgba(255, 255, 255, 0.8) 0%, 
+    rgba(97, 122, 100, 0.95) 50%);
+    position: fixed;
+    border-radius: 2px;
+    z-index: 999;
+    font-family: "Merienda", cursive;
+}
+.navbar img {
   height: 50px;
-  width: 100%;
-  grid-template-columns: 3fr 2fr;
-  align-items: center;
-  padding: 10px 0;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  font-family: "Merienda", cursive;
-  background: linear-gradient(
-    270deg,
-    rgba(97, 122, 100, 0.95) 40%,
-    rgba(255, 255, 255, 0.75) 80%
-  );
-  position: fixed;
-}
-.navbar-logo {
-  font-family: "Merienda", cursive;
-  display: flex;
-  justify-content: center;
-  font-size: 190%;
-  flex-direction: row;
-  margin: auto;
-}
-.item-logo {
-  display: flex;
-  background-repeat: no-repeat;
-  height: 60px;
-  width: 70px;
-  background-image: url(../../images/logo2.png);
-  background-size: cover;
-  background-position: center;
-  margin: 0 20px 0 0;
+  margin-left: 120%;
 }
 
-.stick-nav a {
-  color: white;
-}
-
-.stick-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 .navbar ul {
   display: flex;
+  align-items: center;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-direction: row;
-  grid-column: 2 / 3;
+  padding: 0px;
+  margin: 0px;
+  height: 100px;
+}
+.navbar ul li:first-child {
+  width: 90%;
+  justify-content: left;
+}
+.navbar li {
+  margin: 10px;
+  height: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+}
+.navbar ul li:last-child {
+  width: 200px;
+}
+.navbar a {
+  color: white;
+  text-shadow: 1px 1px #000;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: white;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  text-align: center;
+.navbar-full {
+  margin: 0 !important;
+  position: -webkit-sticky !important;
+  position: sticky !important; 
+  top: 0 !important;
+  border-radius: 0;
+  width: 100% !important;
+  margin-bottom: 20px !important;
+}
+.active {
+  border-bottom: 2px solid white;
 }
